@@ -1,0 +1,416 @@
+@charset "UTF-8";
+/**
+ * Сброс стилей
+ **/
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800&display=swap");
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+input {
+    outline: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+/**
+ * Основные стили
+ **/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    min-width: 320px;
+    max-width: 100%;
+    padding: 0 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.bottom-line {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 700;
+    font-family: "Saira Extra Condensed", sans-serif;
+    text-transform: uppercase;
+    color: #343a40;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+h1 {
+    font-size: 96px;
+}
+
+h2 {
+    font-size: 56px;
+    margin-bottom: 60px;
+}
+
+h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    color: #6c757d;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+p {
+    color: #6c757d;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.block {
+    margin-bottom: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.dates {
+    color: #bd5d38;
+}
+
+.menu-section {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 270px;
+    height: 100vh;
+    background: #bd5d38;
+}
+
+.menu-section .menu__img {
+    margin: 130px 0 30px;
+}
+
+.menu-section .menu__img img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 7px solid #ca7d60;
+}
+
+.menu-section nav {
+    text-align: center;
+}
+
+.menu-section nav ul li {
+    margin-bottom: 20px;
+}
+
+.menu-section nav ul li a {
+    font-size: 15px;
+    font-family: "Saira", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.menu-section nav ul li a:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.info-section {
+    position: absolute;
+    left: 270px;
+    top: 0;
+    padding: 0 50px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .about {
+    padding: 120px 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .about h1 span {
+    color: #bd5d38;
+}
+
+.info-section .about .subheading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 70px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .about .subheading h4,
+      .info-section .about .subheading a {
+    font-family: "Saira Extra Condensed", sans-serif;
+    color: #6c757d;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .about .subheading a {
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 5px;
+    color: #bd5d38;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .about p {
+    width: 85%;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .about .social-icons {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .about .social-icons a {
+    margin-right: 30px;
+    height: 56px;
+    width: 56px;
+    display: block;
+}
+
+.info-section .about .social-icons a.social-icon-linkedin {
+    background: url("../img/linkedin.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .about .social-icons a.social-icon-linkedin:hover {
+    background: url("../img/linkedin (1).png");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.info-section .about .social-icons a.social-icon-xing {
+    background: url("../img/xing.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .about .social-icons a.social-icon-xing:hover {
+    background: url("../img/xing (1).png");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.info-section .about .social-icons a.social-icon-github {
+    background: url("../img/github.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .about .social-icons a.social-icon-github:hover {
+    background: url("../img/github (1).png");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.info-section .experience {
+    padding: 90px 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .experience .experience__block {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .experience .experience__block .experience__left h4 {
+    margin-bottom: 30px;
+}
+
+.info-section .education {
+    padding: 120px 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .education .education__block {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .education .education__block .education__left {
+    width: 85%;
+}
+
+.info-section .skills {
+    padding: 70px 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .skills h2 {
+    margin-bottom: 40px;
+}
+
+.info-section .skills .skills__block {
+    margin-bottom: 40px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .skills .skills__block h4 {
+    margin-bottom: 30px;
+}
+
+.info-section .skills .skills__block .skills__icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .skills .skills__block .skills__icons img {
+    width: 45px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.info-section .skills .skills__block .skills__list {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-section .skills .skills__block .skills__list nav ol {
+    list-style-type: none;
+}
+
+.info-section .skills .skills__block .skills__list nav ol li {
+    color: #6c757d;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.info-section .skills .skills__block .skills__list nav ol li img {
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.info-section .interests {
+    padding: 180px 0 190px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}

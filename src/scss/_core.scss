@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/**
+ * Основные стили
+ **/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  @include min-max(320px, 100%, 0);
+}
+.bottom-line {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  font-family: "Saira Extra Condensed", sans-serif;
+  text-transform: uppercase;
+  color: $text-color;
+  transition: all 0.3s;
+}
+
+h1 {
+  font-size: 96px;
+}
+
+h2 {
+  font-size: 56px;
+  margin-bottom: 60px;
+}
+
+h3 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  color: $about-color;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+p {
+  color: $about-color;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.block {
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.dates {
+  color: $menu;
+}

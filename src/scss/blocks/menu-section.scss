@@ -1,0 +1,46 @@
+.menu-section {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 270px;
+  height: 100vh;
+  background: $menu;
+
+  .menu__img {
+    margin: 130px 0 30px;
+
+    img {
+      display: block;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: 7px solid #ca7d60;
+    }
+  }
+
+  nav {
+    text-align: center;
+
+    ul {
+      li {
+        margin-bottom: 20px;
+
+        a {
+          font-size: 15px;
+          font-family: "Saira", sans-serif;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: 700;
+          line-height: 24px;
+          letter-spacing: 2px;
+          color: $menu-light;
+
+          &:hover {
+            color: $menu-lighten;
+          }
+        }
+      }
+    }
+  }
+}

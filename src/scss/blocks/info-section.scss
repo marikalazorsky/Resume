@@ -1,0 +1,182 @@
+.info-section {
+  position: absolute;
+  left: 270px;
+  top: 0;
+  padding: 0 50px;
+  transition: all 0.3s;
+
+  // Block "About"
+  .about {
+    padding: 120px 0;
+    transition: all 0.3s;
+
+    h1 {
+      span {
+        color: $menu;
+      }
+    }
+
+    .subheading {
+      display: flex;
+      margin-bottom: 70px;
+      transition: all 0.3s;
+
+      h4,
+      a {
+        font-family: "Saira Extra Condensed", sans-serif;
+        color: $about-color;
+        text-transform: uppercase;
+        transition: all 0.3s;
+      }
+
+      a {
+        font-size: 24px;
+        font-weight: 500;
+        margin-left: 5px;
+        color: $menu;
+        transition: all 0.3s;
+      }
+    }
+
+    p {
+      width: 85%;
+      transition: all 0.3s;
+    }
+
+    .social-icons {
+      margin-top: 50px;
+      display: flex;
+      transition: all 0.3s;
+
+      a {
+        margin-right: 30px;
+        height: 56px;
+        width: 56px;
+        display: block;
+
+        &.social-icon-linkedin {
+          background: url("../img/linkedin.png");
+          background-size: cover;
+          transition: all 0.3s;
+
+          &:hover {
+            background: url("../img/linkedin (1).png");
+            background-size: cover;
+          }
+        }
+
+        &.social-icon-xing {
+          background: url("../img/xing.png");
+          background-size: cover;
+          transition: all 0.3s;
+
+          &:hover {
+            background: url("../img/xing (1).png");
+            background-size: cover;
+          }
+        }
+
+        &.social-icon-github {
+          background: url("../img/github.png");
+          background-size: cover;
+          transition: all 0.3s;
+
+          &:hover {
+            background: url("../img/github (1).png");
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+
+  // Block "Experience"
+  .experience {
+    padding: 90px 0;
+    transition: all 0.3s;
+
+    .experience__block {
+      transition: all 0.3s;
+
+      .experience__left {
+        h4 {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  // Block "Education"
+  .education {
+    padding: 120px 0;
+    transition: all 0.3s;
+
+    .education__block {
+      transition: all 0.3s;
+
+      .education__left {
+        width: 85%;
+      }
+    }
+  }
+
+  // Block "Skills"
+  .skills {
+    padding: 70px 0;
+    transition: all 0.3s;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .skills__block {
+      margin-bottom: 40px;
+      transition: all 0.3s;
+
+      h4 {
+        margin-bottom: 30px;
+      }
+
+      .skills__icons {
+        display: flex;
+        align-items: center;
+        transition: all 0.3s;
+
+        img {
+          width: 45px;
+          height: 50px;
+          margin-right: 10px;
+        }
+      }
+
+      .skills__list {
+        transition: all 0.3s;
+
+        nav {
+          ol {
+            list-style-type: none;
+            li {
+              color: $about-color;
+              font-family: "Roboto", sans-serif;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+
+              img {
+                height: 16px;
+                vertical-align: middle;
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Block "Interests"
+  .interests {
+    padding: 180px 0 190px;
+    transition: all 0.3s;
+  }
+}
