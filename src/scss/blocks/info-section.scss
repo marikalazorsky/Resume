@@ -2,12 +2,20 @@
   position: absolute;
   left: 270px;
   top: 0;
-  padding: 0 50px;
+  max-width: 1200px;
   transition: all 0.3s;
+
+  & > div {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 50px;
+  }
 
   // Block "About"
   .about {
-    padding: 120px 0;
+    padding-top: 20px;
     transition: all 0.3s;
 
     h1 {
@@ -18,6 +26,7 @@
 
     .subheading {
       display: flex;
+      flex-wrap: wrap;
       margin-bottom: 70px;
       transition: all 0.3s;
 
@@ -31,6 +40,7 @@
 
       a {
         font-size: 24px;
+        line-height: 30px;
         font-weight: 500;
         margin-left: 5px;
         color: $menu;
@@ -92,37 +102,47 @@
 
   // Block "Experience"
   .experience {
-    padding: 90px 0;
     transition: all 0.3s;
 
     .experience__block {
       transition: all 0.3s;
 
       .experience__left {
+        width: 75%;
+        transition: all 0.3s;
+
         h4 {
           margin-bottom: 30px;
         }
+      }
+
+      .experience__right {
+        transition: all 0.3s;
       }
     }
   }
 
   // Block "Education"
   .education {
-    padding: 120px 0;
+    padding-top: 20px;
     transition: all 0.3s;
 
     .education__block {
       transition: all 0.3s;
 
       .education__left {
-        width: 85%;
+        width: 75%;
+      }
+
+      .education__right {
+        transition: all 0.3s;
       }
     }
   }
 
   // Block "Skills"
   .skills {
-    padding: 70px 0;
+    padding-top: 20px;
     transition: all 0.3s;
 
     h2 {
@@ -139,13 +159,15 @@
 
       .skills__icons {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         transition: all 0.3s;
 
         img {
           width: 45px;
           height: 50px;
-          margin-right: 10px;
+          margin: 0 10px 10px 0;
+          transition: all 0.3s;
         }
       }
 
@@ -176,7 +198,85 @@
 
   // Block "Interests"
   .interests {
-    padding: 180px 0 190px;
+    padding-top: 0;
     transition: all 0.3s;
+  }
+}
+
+@media (max-width: 1000px) {
+  .info-section {
+    position: relative;
+    top: 0;
+    left: 15px;
+
+    .about,
+    .education,
+    .skills,
+    .interests {
+      padding-top: 80px;
+    }
+  }
+}
+
+@media (max-width: 685px) {
+  .info-section {
+    .experience {
+      .experience__block {
+        flex-direction: column;
+
+        .experience__left {
+          width: 100%;
+        }
+
+        .experience__right {
+          padding-top: 20px;
+        }
+      }
+    }
+
+    .education {
+      .education__block {
+        flex-direction: column;
+
+        .education__left {
+          width: 100%;
+        }
+
+        .education__right {
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .info-section {
+    .about {
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .info-section {
+    & > div {
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+    .about {
+      .social-icons {
+        a {
+          height: 40px;
+          width: 40px;
+          margin-right: 20px;
+        }
+      }
+    }
   }
 }

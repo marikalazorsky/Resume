@@ -118,6 +118,7 @@ h3 {
 h4 {
     color: #6c757d;
     font-size: 24px;
+    line-height: 30px;
     font-weight: 500;
 }
 
@@ -152,10 +153,23 @@ p {
     width: 270px;
     height: 100vh;
     background: #bd5d38;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .menu-section .menu__img {
-    margin: 130px 0 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
 }
 
 .menu-section .menu__img img {
@@ -167,8 +181,34 @@ p {
     border: 7px solid #ca7d60;
 }
 
+.menu-section .burger {
+    display: none;
+}
+
 .menu-section nav {
     text-align: center;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: auto;
+    padding-top: 20px;
+}
+
+.menu-section nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
 }
 
 .menu-section nav ul li {
@@ -190,18 +230,171 @@ p {
     color: rgba(255, 255, 255, 0.75);
 }
 
+.menu-section nav ul li a.active {
+    color: #fff;
+}
+
+@media (max-width: 1000px) {
+    .menu-section {
+        width: 100%;
+        height: 60px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: start;
+        z-index: 10;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    /*Burger menu*/
+    }
+
+    .menu-section.active__menu {
+        height: 300px;
+    }
+
+    .menu-section.active__menu nav.active {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        text-align: left;
+        padding: 10px 0 0 20px;
+    }
+
+    .menu-section .menu__img {
+        display: none;
+    }
+
+    .menu-section nav {
+        display: none;
+    }
+
+    .menu-section .burger {
+        display: block;
+        padding: 0px 16px;
+      /*Burger menu action*/
+    }
+
+    .menu-section .burger p {
+        padding-top: 0;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    .menu-section .burger .burger__menu {
+        position: absolute;
+        right: 30px;
+        top: 7px;
+        content: "";
+        width: 30px;
+        height: 40px;
+        cursor: pointer;
+        padding: 1px 6px;
+        z-index: 1000;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+    }
+
+    .menu-section .burger .burger__menu span,
+        .menu-section .burger .burger__menu span:before,
+        .menu-section .burger .burger__menu span:after {
+        content: "";
+        max-width: 100%;
+        text-align: center;
+        width: 30px;
+        position: absolute;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.5);
+        display: block;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        border-radius: 5px;
+    }
+
+    .menu-section .burger .burger__menu span {
+        top: 20px;
+    }
+
+    .menu-section .burger .burger__menu span:before {
+        content: "";
+        top: -10px;
+    }
+
+    .menu-section .burger .burger__menu span:after {
+        content: "";
+        bottom: -10px;
+    }
+
+    .menu-section .burger .burger__menu span.active:before {
+        content: "";
+        top: 0px;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transition: top 300ms, -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: top 300ms, -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        -o-transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .menu-section .burger .burger__menu span.active:after {
+        content: "";
+        bottom: 0;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transition: bottom 300ms, -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: bottom 300ms, -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        -o-transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .menu-section .burger .burger__menu span.active {
+        background-color: #bd5d38;
+    }
+}
+
 .info-section {
     position: absolute;
     left: 270px;
     top: 0;
-    padding: 0 50px;
+    max-width: 1200px;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
+.info-section > div {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 80px 50px;
+}
+
 .info-section .about {
-    padding: 120px 0;
+    padding-top: 20px;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -215,6 +408,8 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-bottom: 70px;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
@@ -233,6 +428,7 @@ p {
 
 .info-section .about .subheading a {
     font-size: 24px;
+    line-height: 30px;
     font-weight: 500;
     margin-left: 5px;
     color: #bd5d38;
@@ -311,7 +507,6 @@ p {
 }
 
 .info-section .experience {
-    padding: 90px 0;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -323,12 +518,25 @@ p {
     transition: all 0.3s;
 }
 
+.info-section .experience .experience__block .experience__left {
+    width: 75%;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
 .info-section .experience .experience__block .experience__left h4 {
     margin-bottom: 30px;
 }
 
+.info-section .experience .experience__block .experience__right {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
 .info-section .education {
-    padding: 120px 0;
+    padding-top: 20px;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -341,11 +549,17 @@ p {
 }
 
 .info-section .education .education__block .education__left {
-    width: 85%;
+    width: 75%;
+}
+
+.info-section .education .education__block .education__right {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .info-section .skills {
-    padding: 70px 0;
+    padding-top: 20px;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -370,6 +584,8 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -381,7 +597,10 @@ p {
 .info-section .skills .skills__block .skills__icons img {
     width: 45px;
     height: 50px;
-    margin-right: 10px;
+    margin: 0 10px 10px 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .info-section .skills .skills__block .skills__list {
@@ -409,8 +628,77 @@ p {
 }
 
 .info-section .interests {
-    padding: 180px 0 190px;
+    padding-top: 0;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
+}
+
+@media (max-width: 1000px) {
+    .info-section {
+        position: relative;
+        top: 0;
+        left: 15px;
+    }
+
+    .info-section .about,
+    .info-section .education,
+    .info-section .skills,
+    .info-section .interests {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 685px) {
+    .info-section .experience .experience__block {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .info-section .experience .experience__block .experience__left {
+        width: 100%;
+    }
+
+    .info-section .experience .experience__block .experience__right {
+        padding-top: 20px;
+    }
+
+    .info-section .education .education__block {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .info-section .education .education__block .education__left {
+        width: 100%;
+    }
+
+    .info-section .education .education__block .education__right {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    .info-section .about p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .info-section > div {
+        padding: 20px;
+    }
+
+    .info-section h2 {
+        margin-bottom: 30px;
+    }
+
+    .info-section .about .social-icons a {
+        height: 40px;
+        width: 40px;
+        margin-right: 20px;
+    }
 }
