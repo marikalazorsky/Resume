@@ -201,6 +201,70 @@
     padding-top: 0;
     transition: all 0.3s;
   }
+
+  // Block "Works"
+  .works {
+    padding-top: 0;
+    transition: all 0.5s;
+
+    .works-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        margin: 0 40px 40px 0;
+
+        a {
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+
+        .item:last-child {
+          margin-right: 0;
+        }
+
+        .buttons {
+          margin-top: 10px;
+          padding: 0 40px;
+          display: flex;
+          justify-content: space-between;
+
+          a {
+            text-decoration: none;
+            padding: 5px 15px;
+            font-size: 20px;
+            color: $text-color;
+            transition: all 0.3s;
+          }
+
+          a:hover {
+            border-radius: 10px;
+            padding-bottom: 5px;
+          }
+
+          a::after {
+            content: "";
+            display: block;
+            width: 100%;
+            background-color: $text-color;
+            height: 2px;
+            transform: scale(0);
+            transition: all 0.3s;
+          }
+
+          a:hover::after {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1000px) {
@@ -213,8 +277,15 @@
     .about,
     .education,
     .skills,
-    .interests {
+    .interests,
+    .works {
       padding-top: 80px;
+    }
+
+    .works {
+      .works-items {
+        justify-content: start;
+      }
     }
   }
 }
@@ -256,6 +327,23 @@
     .about {
       p {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .info-section {
+    .works {
+      .works-items {
+        .item {
+          .buttons {
+            padding: 0 10px;
+            a {
+              padding: 0 5px;
+            }
+          }
+        }
       }
     }
   }
