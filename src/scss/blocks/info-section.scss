@@ -355,6 +355,15 @@
       padding: 20px;
     }
 
+    .experience,
+    .interests {
+      padding-top: 60px;
+    }
+
+    .works {
+      padding-top: 40px;
+    }
+
     h2 {
       margin-bottom: 30px;
     }
@@ -366,19 +375,6 @@
           margin-right: 20px;
         }
       }
-    }
-  }
-}
-
-@media (max-width: 320px) {
-  .info-section {
-    .experience,
-    .interests {
-      padding-top: 60px;
-    }
-
-    .works {
-      padding-top: 40px;
     }
   }
 }

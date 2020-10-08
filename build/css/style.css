@@ -795,6 +795,15 @@ p {
         padding: 20px;
     }
 
+    .info-section .experience,
+  .info-section .interests {
+        padding-top: 60px;
+    }
+
+    .info-section .works {
+        padding-top: 40px;
+    }
+
     .info-section h2 {
         margin-bottom: 30px;
     }
@@ -803,16 +812,5 @@ p {
         height: 40px;
         width: 40px;
         margin-right: 20px;
-    }
-}
-
-@media (max-width: 320px) {
-    .info-section .experience,
-  .info-section .interests {
-        padding-top: 60px;
-    }
-
-    .info-section .works {
-        padding-top: 40px;
     }
 }
