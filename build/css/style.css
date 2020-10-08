@@ -805,3 +805,14 @@ p {
         margin-right: 20px;
     }
 }
+
+@media (max-width: 320px) {
+    .info-section .experience,
+  .info-section .interests {
+        padding-top: 60px;
+    }
+
+    .info-section .works {
+        padding-top: 40px;
+    }
+}
